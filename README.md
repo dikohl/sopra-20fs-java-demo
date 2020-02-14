@@ -8,6 +8,7 @@
         - build.gradle (file with all the info)
         - gradlew & gradlew.bat (startup scripts for windows and unix)
     - IntelliJ has a Gradle Tab where you can manage everything (no need to touch the files)
+    - Local as well as online Jars possible
 -  Project structure
     - src folder with 2 subfolders "main" & "test"
     - "main" contains all the production logic / code

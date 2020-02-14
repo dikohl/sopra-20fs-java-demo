@@ -25,6 +25,6 @@ public class PalindromeChecker {
      * @return true if original and reverse are equal and not empty.
      */
     public boolean equalStrings(String original, String reverse) {
-        return original.equals(reverse);
+        return false;
     }
 }
