@@ -3,56 +3,67 @@
  */
 package demo;
 
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PalindromeCheckerTest {
 
+    private PalindromeChecker classUnderTest;
+
+    @Before
+    public void setUp() {
+        classUnderTest = new PalindromeChecker();
+    }
+
     @Test
     public void testCheckPalindrome_True() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
+
         assertTrue(classUnderTest.checkPalindrome("ANNA"));
     }
 
     @Test
     public void testCheckPalindrome_False() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertFalse(classUnderTest.checkPalindrome("TESTING THIS STRING %+"));
     }
 
     @Test
     public void testCheckPalindrome_Empty() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertFalse(classUnderTest.checkPalindrome(""));
     }
 
     @Test
     public void testReverseString() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertEquals("+% GNIRTS SIHT GNITSET", classUnderTest.reverseString("TESTING THIS STRING %+"));
     }
 
     @Test
     public void testReverseString_Empty() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertEquals("", classUnderTest.reverseString(""));
     }
 
     @Test
     public void testEqualStringsNotEmpty() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertFalse(classUnderTest.equalStrings("TESTING THIS STRING %+", "+% GNIRTS SIHT GNITSET"));
     }
 
     @Test
-    public void testEqualStringsNotEmpty_Empty() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
+    public void testEqualStringsNotEmpty_EmptyBoth() {
         assertFalse(classUnderTest.equalStrings("", ""));
     }
 
     @Test
+    public void testEqualStringsNotEmpty_EmptyOriginal() {
+        assertFalse(classUnderTest.equalStrings("AA", ""));
+    }
+
+    @Test
+    public void testEqualStringsNotEmpty_EmptyReverse() {
+        assertFalse(classUnderTest.equalStrings("", "AA"));
+    }
+
+    @Test
     public void testEqualStringsNotEmpty_Same() {
-        PalindromeChecker classUnderTest = new PalindromeChecker();
         assertTrue(classUnderTest.equalStrings("TESTING THIS STRING %+", "TESTING THIS STRING %+"));
     }
 }

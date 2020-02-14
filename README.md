@@ -30,6 +30,7 @@
     - You can use Watchers to see the value of variables at certain breakpoints
     
 #Useful Intellij shortcuts
+- Generate Template Code (empty Method etc.): **Ctrl+N or ⌘+N**
 - Recommendation / Quick fix: **Alt+Enter or Option+Enter**
     - Try this if anything is red
     - This way you can very quickly generate a new method
