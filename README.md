@@ -1,1 +1,12 @@
 # sopra-20fs-java-demo
+- Where to download
+- Gradle basics
+- Basic project structure
+- Setup
+    - Correct Java Version (build and run!)
+- Building
+    - debug vs run
+- Testing
+    - short cut to create test (Ctrl+Shift+T / Shift+⌘+T)
+- Debugging
+    - how to use breakpoint and step through them
