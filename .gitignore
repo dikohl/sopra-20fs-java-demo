@@ -7,7 +7,6 @@
 *.ear
 
 ### Gradle ###
-/.gradle/
 .gradle
 /build/
 
@@ -20,3 +19,5 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
+#ignore Idea settings for the demo
+/.idea/

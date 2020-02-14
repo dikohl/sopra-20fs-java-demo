@@ -1,12 +1,43 @@
-# sopra-20fs-java-demo
-- Where to download
-- Gradle basics
-- Basic project structure
-- Setup
+# sopra java demo
+- Download Intellij Ulitmate
+    - https://www.jetbrains.com/student/
+    - Ultimate Version allows you to work on JavaScript and Java Code in the same IDE
+- Gradle
+    - helps assemble & manage packages/dependencies and build an application
+    - most important file(s)
+        - build.gradle (file with all the info)
+        - gradlew & gradlew.bat (startup scripts for windows and unix)
+    - IntelliJ has a Gradle Tab where you can manage everything (no need to touch the files)
+-  Project structure
+    - src folder with 2 subfolders "main" & "test"
+    - "main" contains all the production logic / code
+    - "test" is basically a mirror of main and contains tests for the logic
+- Java/Project Setup in IntelliJ
     - Correct Java Version (build and run!)
-- Building
-    - debug vs run
-- Testing
-    - short cut to create test (Ctrl+Shift+T / Shift+⌘+T)
-- Debugging
-    - how to use breakpoint and step through them
+        - build: Preferences -> Build, Execution, Deployment -> Build Tools -> Gradle -> Gradle JVM -> 13 (might need to add 13 first)
+        - run: Edit Configuration -> JRE -> 13 (might need to add 13 first)
+- Building the Project
+    - build: compile the
+    - run: compile and start application (prod environment)
+    - debug: compile and start application, able to use breakpoints etc (dev environment)
+- Testing Code
+    - short cut to create test from a class in "main" (Ctrl+Shift+T / Shift+⌘+T)
+    - Run test with little play button
+    - Debugging is also possible here
+- Debugging Code
+    - Breakpoints can be set next to the line number
+    - F7 - F9 can be used to step through code and in to functions
+    - You can use Watchers to see the value of variables at certain breakpoints
+    
+#Useful Intellij shortcuts
+- Recommendation / Quick fix: **Alt+Enter or Option+Enter**
+    - Try this if anything is red
+    - This way you can very quickly generate a new method
+- Rename (anythin): **Shift+F6**
+- Inline a variable/method: **Ctrl+Alt+N or Option+⌘+N**
+- Search Class by name in project: **Double Shift** or **Alt+O or ⌘+O**
+- Move line up/down: **Shift+Alt+Up/Down or Shift+⌘+Up/Down**
+- Extract as Variable / Parameter / Method: **Alt+Ctrl+V/P/M or Option+⌘+V/P/M**
+    - You can also just write ".var" or similar at the end (new App().var => App app = new App();)
+- Create/Find Test: **Shift+Ctrl+T or Shift+⌘+T**
+- Search Settings: **Shift+Alt+A or Shift+⌘+A**
