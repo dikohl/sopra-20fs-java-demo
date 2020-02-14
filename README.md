@@ -4,6 +4,7 @@
     - Ultimate Version allows you to work on JavaScript and Java Code in the same IDE
 - Gradle
     - helps assemble & manage packages/dependencies and build an application
+    - Tasks can be defined and used to build/run/verify code
     - most important file(s)
         - build.gradle (file with all the info)
         - gradlew & gradlew.bat (startup scripts for windows and unix)
@@ -22,20 +23,21 @@
     - run: compile and start application (prod environment)
     - debug: compile and start application, able to use breakpoints etc (dev environment)
 - Testing Code
-    - short cut to create test from a class in "main" (Ctrl+Shift+T / Shift+⌘+T)
+    - short cut to create (and find) test from a class in "main" (Ctrl+Shift+T / Shift+⌘+T)
     - Run test with little play button
     - Debugging is also possible here
 - Debugging Code
     - Breakpoints can be set next to the line number
     - F7 - F9 can be used to step through code and in to functions
     - You can use Watchers to see the value of variables at certain breakpoints
-    
-#Useful Intellij shortcuts
+
+**USEFUL INTELLIJ SHORTCUTS**
 - Generate Template Code (empty Method etc.): **Ctrl+N or ⌘+N**
 - Recommendation / Quick fix: **Alt+Enter or Option+Enter**
     - Try this if anything is red
     - This way you can very quickly generate a new method
 - Rename (anythin): **Shift+F6**
+- Copy Line: **Alt+D or ⌘+D**
 - Inline a variable/method: **Ctrl+Alt+N or Option+⌘+N**
 - Search Class by name in project: **Double Shift** or **Alt+O or ⌘+O**
 - Move line up/down: **Shift+Alt+Up/Down or Shift+⌘+Up/Down**

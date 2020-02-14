@@ -24,14 +24,19 @@ public class Solution {
 
     /**
      * Compare two string if they are the same, if they are empty return false, empty string can't be a palindrome.
+     * Disregards anything but letters and numbers as well as the case of the letters.
      * @param original String from user input
      * @param reverse String after reversal
      * @return true if original and reverse are equal and not empty.
      */
     public boolean equalStrings(String original, String reverse) {
-        if (original.isEmpty() || reverse.isEmpty()) {
+        String cleanOriginal = original.replaceAll("[^A-Za-z0-9]",""); //if you use .replace() it won't work!
+        String cleanReverse = reverse.replaceAll("[^A-Za-z0-9]","");
+
+        if (cleanOriginal.isEmpty() || cleanReverse.isEmpty()) {
             return false;
         }
-        return original.equals(reverse);
+
+        return cleanOriginal.equalsIgnoreCase(cleanReverse);
     }
 }

@@ -14,7 +14,7 @@ public class App {
             String original = in.nextLine();
             if (original.equals("exit")) {
                 break;
-            } else if (!checker.checkPalindrome(original)) {
+            } else if (checker.checkPalindrome(original)) {
                 System.out.println("It's a palindrome");
             } else {
                 System.out.println("It's NOT a palindrome, sorry!");

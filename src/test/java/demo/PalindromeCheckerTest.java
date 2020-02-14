@@ -17,9 +17,13 @@ public class PalindromeCheckerTest {
     }
 
     @Test
-    public void testCheckPalindrome_True() {
-
+    public void testCheckPalindrome_Word() {
         assertTrue(classUnderTest.checkPalindrome("ANNA"));
+    }
+
+    @Test
+    public void testCheckPalindrome_Sentence() {
+        assertTrue(classUnderTest.checkPalindrome("Murder for a jar of red rum!"));
     }
 
     @Test
