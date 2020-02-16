@@ -32,7 +32,7 @@
     - F7 - F9 can be used to step through code and in to functions
     - You can use Watchers to see the value of variables at certain breakpoints
 
-##Useful INTELLIJ shortcuts
+**Useful INTELLIJ shortcuts**
 
 https://medium.com/better-programming/intellij-keyboard-shortcuts-to-swear-by-7638c0efcc76
 
