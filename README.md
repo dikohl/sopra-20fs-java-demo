@@ -1,4 +1,5 @@
 # sopra java demo
+
 - Download Intellij Ulitmate
     - https://www.jetbrains.com/student/
     - Ultimate Version allows you to work on JavaScript and Java Code in the same IDE
@@ -32,6 +33,7 @@
     - You can use Watchers to see the value of variables at certain breakpoints
 
 ##Useful INTELLIJ shortcuts
+
 https://medium.com/better-programming/intellij-keyboard-shortcuts-to-swear-by-7638c0efcc76
 
 | Action                                         | Windows             | Mac                 | Comment                   |
