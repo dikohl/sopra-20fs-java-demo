@@ -17,9 +17,7 @@ public class PalindromeChecker {
      * @return The reversed String
      */
     public String reverseString(String original) {
-        StringBuilder builder = new StringBuilder();
-        builder.append(original);
-        return builder.reverse().toString();
+        return "";
     }
 
     /**
@@ -30,13 +28,6 @@ public class PalindromeChecker {
      * @return true if original and reverse are equal and not empty.
      */
     public boolean equalStrings(String original, String reverse) {
-        String cleanOriginal = original.replaceAll("[^A-Za-z0-9]","");
-        String cleanReverse = reverse.replaceAll("[^A-Za-z0-9]","");
-
-        if (cleanOriginal.isEmpty() || cleanReverse.isEmpty()) {
-            return false;
-        }
-
-        return cleanOriginal.equalsIgnoreCase(cleanReverse);
+        return true;
     }
 }
