@@ -31,17 +31,19 @@
     - F7 - F9 can be used to step through code and in to functions
     - You can use Watchers to see the value of variables at certain breakpoints
 
-**USEFUL INTELLIJ SHORTCUTS**
-- Generate Template Code (empty Method etc.): **Ctrl+N or ⌘+N**
-- Recommendation / Quick fix: **Alt+Enter or Option+Enter**
-    - Try this if anything is red
-    - This way you can very quickly generate a new method
-- Rename (anythin): **Shift+F6**
-- Copy Line: **Alt+D or ⌘+D**
-- Inline a variable/method: **Ctrl+Alt+N or Option+⌘+N**
-- Search Class by name in project: **Double Shift** or **Alt+O or ⌘+O**
-- Move line up/down: **Shift+Alt+Up/Down or Shift+⌘+Up/Down**
-- Extract as Variable / Parameter / Method: **Alt+Ctrl+V/P/M or Option+⌘+V/P/M**
-    - You can also just write ".var" or similar at the end (new App().var => App app = new App();)
-- Create/Find Test: **Shift+Ctrl+T or Shift+⌘+T**
-- Search Settings: **Shift+Alt+A or Shift+⌘+A**
+##Useful INTELLIJ shortcuts
+https://medium.com/better-programming/intellij-keyboard-shortcuts-to-swear-by-7638c0efcc76
+
+| Action                                         | Windows             | Mac                 | Comment                   |
+| -------------                                  |:-------------:      | :----:              |---------                  |
+| Generate Template Code (empty Method etc.)     | Ctrl+N              | ⌘+N                 |Try this if anything is red|
+| Recommendation / Quick fix                     | Alt+Enter           | Option+Enter        |                           |
+| Rename (anything)                              | Shift+F6            | Shift+F6            |                           |
+| Copy Line                                      | Alt+D               | ⌘+D                 |                           |
+| Inline a variable/method                       | Ctrl+Alt+N          | Option+⌘+N          |                           |
+| Search Class by name in project                | Double Shift        | Double Shift        | Also Alt+O or ⌘+O         |
+| Move line up/down                              | Shift+Alt+Up/Down   | Shift+⌘+Up/Down     |                           |
+| Extract as Variable / Parameter / Method       | Alt+Ctrl+V/P/M      | Option+⌘+V/P/M      | You can also just write ".var" or similar at the end (new App().var => App app = new App();) |
+| Create/Find Test                               | Shift+Ctrl+T        | Shift+⌘+T           |                           |
+| Search Settings                                | Shift+Alt+A         | Shift+⌘+A           |                           |
+| Go back/forward (files / cursor location)      | Ctrl+Alt+Left/Right | Option+⌘+Left/Right |                           |
