@@ -28,6 +28,13 @@ public class PalindromeChecker {
      * @return true if original and reverse are equal and not empty.
      */
     public boolean equalStrings(String original, String reverse) {
-        return true;
+        String cleanOriginal = original.replace("[^A-Za-z0-9]",""); //if you use .replace() it won't work!
+        String cleanReverse = reverse.replace("[^A-Za-z0-9]","");
+
+        if (cleanOriginal.isEmpty() || cleanReverse.isEmpty()) {
+            return false;
+        }
+
+        return cleanOriginal.equalsIgnoreCase(cleanReverse);
     }
 }

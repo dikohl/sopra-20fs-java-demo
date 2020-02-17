@@ -3,6 +3,10 @@
  */
 package demo;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Solution {
 
     public boolean checkPalindrome(String original) {
@@ -20,6 +24,25 @@ public class Solution {
         StringBuilder builder = new StringBuilder();
         builder.append(original);
         return builder.reverse().toString();
+    }
+
+    /**
+     * Reverses the input string.
+     * @param original The original String to be reversed
+     * @return The reversed String
+     */
+    public String reverseStringLong(String original) {
+        List<Character> chars = original.chars()
+                .mapToObj(c -> (char)c)
+                .collect(Collectors.toList());
+
+        Collections.reverse(chars);
+
+        String reverse = "";
+        for (char c : chars) {
+            reverse = reverse + c;
+        }
+        return reverse;
     }
 
     /**
