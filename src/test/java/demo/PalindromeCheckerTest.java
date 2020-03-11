@@ -5,69 +5,90 @@ package demo;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
 
 public class PalindromeCheckerTest {
 
     private PalindromeChecker classUnderTest;
+    private StringUtil stringUtilMock;
 
     @Before
     public void setUp() {
-        classUnderTest = new PalindromeChecker();
+        // Create an empty hull of a class, we can control the behaviour of every method
+        stringUtilMock = mock(StringUtil.class);
+        classUnderTest = new PalindromeChecker(stringUtilMock);
     }
 
     @Test
     public void testCheckPalindrome_Word() {
-        assertTrue(classUnderTest.checkPalindrome("ANNA"));
+        //Setup, what needs to be available to run the method
+        String word = "ANNA";
+        String reverse = "ANNA";
+
+        //Mocking, how should the mocked class(es) behave
+        given(stringUtilMock.reverseString(word)).willReturn(reverse);
+        given(stringUtilMock.equalStrings(word, reverse)).willReturn(true);
+
+        //Call, actually call the method to be tested
+        boolean isPalindrome = classUnderTest.checkPalindrome(word);
+
+        //Assert, check if the result is as expected
+        assertTrue(isPalindrome);
     }
 
     @Test
     public void testCheckPalindrome_Sentence() {
-        assertTrue(classUnderTest.checkPalindrome("Murder for a jar of red rum!"));
+        //Setup, what needs to be available to run the method
+        String word = "This doesn't matter";
+        String reverse = "This neither";
+
+        //Mocking, how should the mocked class(es) behave
+        given(stringUtilMock.reverseString(word)).willReturn(reverse);
+        given(stringUtilMock.equalStrings(word, reverse)).willReturn(true);
+
+        //Call, actually call the method to be tested
+        boolean isPalindrome = classUnderTest.checkPalindrome(word);
+
+        //Assert, check if the result is as expected
+        assertTrue(isPalindrome);
     }
 
     @Test
     public void testCheckPalindrome_False() {
-        assertFalse(classUnderTest.checkPalindrome("TESTING THIS STRING %+"));
+        //Setup, what needs to be available to run the method
+        String word = "This doesn't matter";
+        String reverse = "This neither";
+
+        //Mocking, how should the mocked class(es) behave
+        given(stringUtilMock.reverseString(word)).willReturn(reverse);
+        given(stringUtilMock.equalStrings(word, reverse)).willReturn(false);
+
+        //Call, actually call the method to be tested
+        boolean isPalindrome = classUnderTest.checkPalindrome(word);
+
+        //Assert, check if the result is as expected
+        assertFalse(isPalindrome);
     }
 
     @Test
     public void testCheckPalindrome_Empty() {
-        assertFalse(classUnderTest.checkPalindrome(""));
+        //Setup, what needs to be available to run the method
+        String word = "";
+        String reverse = "";
+
+        //Mocking, how should the mocked class(es) behave
+        given(stringUtilMock.reverseString(word)).willReturn(reverse);
+        given(stringUtilMock.equalStrings(word, reverse)).willReturn(false);
+
+        //Call, actually call the method to be tested
+        boolean isPalindrome = classUnderTest.checkPalindrome(word);
+
+        //Assert, check if the result is as expected
+        assertFalse(isPalindrome);
     }
 
-    @Test
-    public void testReverseString() {
-        assertEquals("+% GNIRTS SIHT GNITSET", classUnderTest.reverseString("TESTING THIS STRING %+"));
-    }
 
-    @Test
-    public void testReverseString_Empty() {
-        assertEquals("", classUnderTest.reverseString(""));
-    }
-
-    @Test
-    public void testEqualStringsNotEmpty() {
-        assertFalse(classUnderTest.equalStrings("TESTING THIS STRING %+", "+% GNIRTS SIHT GNITSET"));
-    }
-
-    @Test
-    public void testEqualStringsNotEmpty_EmptyBoth() {
-        assertFalse(classUnderTest.equalStrings("", ""));
-    }
-
-    @Test
-    public void testEqualStringsNotEmpty_EmptyOriginal() {
-        assertFalse(classUnderTest.equalStrings("AA", ""));
-    }
-
-    @Test
-    public void testEqualStringsNotEmpty_EmptyReverse() {
-        assertFalse(classUnderTest.equalStrings("", "AA"));
-    }
-
-    @Test
-    public void testEqualStringsNotEmpty_Same() {
-        assertTrue(classUnderTest.equalStrings("TESTING THIS STRING %+", "TESTING THIS STRING %+"));
-    }
 }

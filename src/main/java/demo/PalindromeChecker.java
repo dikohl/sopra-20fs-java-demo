@@ -3,38 +3,22 @@
  */
 package demo;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class PalindromeChecker {
 
+    private final StringUtil stringUtil;
+
+    public PalindromeChecker(StringUtil stringUtil) {
+        this.stringUtil = stringUtil;
+    }
+
     public boolean checkPalindrome(String original) {
-        String reverse = reverseString(original);
+        String reverse = stringUtil.reverseString(original);
         System.out.println(reverse);
-        return equalStrings(original, reverse);
+        return stringUtil.equalStrings(original, reverse);  //Ctrl+Alt+N or Option+Command+N to Inline!
     }
 
-    /**
-     * Reverses the input string.
-     * @param original The original String to be reversed
-     * @return The reversed String
-     */
-    public String reverseString(String original) {
-        return "";
-    }
-
-    /**
-     * Compare two string if they are the same, if they are empty return false, empty string can't be a palindrome.
-     * Disregards anything but letters and numbers as well as the case of the letters.
-     * @param original String from user input
-     * @param reverse String after reversal
-     * @return true if original and reverse are equal and not empty.
-     */
-    public boolean equalStrings(String original, String reverse) {
-        String cleanOriginal = original.replace("[^A-Za-z0-9]",""); //if you use .replace() it won't work!
-        String cleanReverse = reverse.replace("[^A-Za-z0-9]","");
-
-        if (cleanOriginal.isEmpty() || cleanReverse.isEmpty()) {
-            return false;
-        }
-
-        return cleanOriginal.equalsIgnoreCase(cleanReverse);
-    }
 }
